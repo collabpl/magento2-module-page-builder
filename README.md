@@ -11,6 +11,10 @@ Module does not have any configuration options.
 This way we are reducing the number of initialized widgets on a page load which positively affects the performance of the page
 and PageSpeed Insights score on pages which are solely based on Page Builder.
 
+- Overrides [video-background.js](https://github.com/magento/magento2-page-builder/blob/develop/app/code/Magento/PageBuilder/view/base/web/js/widget/video-background.js) so `['jarallax-wrapper', 'jarallaxVideo', 'vimeoWrapper']` dependencies are loaded only when necesarry
+
+- Overrides [widget.js](https://github.com/magento/magento2-page-builder/blob/develop/app/code/Magento/PageBuilder/view/base/web/js/content-type/row/appearance/default/widget.js) so `['jarallax']` is loaded only when needed
+
 
 ## Why choose this extension over other solutions?
 We don't believe in efficient modules which have tons of options - simple as that - modules which have multiple
