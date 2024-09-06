@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 ### Changed
 
+## 1.0.2 - 2024-09-06
+### Added
+- `['jarallax-wrapper', 'jarallaxVideo', 'vimeoWrapper']` dependencies from `video-background.js` are loaded only when necesarry from now
+- `['jarallax']` dependency from `Magento_PageBuilder::js/content-type/row/appearance/default/widget.js` is loaded only when needed
+
 ## 1.0.1 - 2024-08-17
 ### Added
 - Grunt config with task for source js files minification
