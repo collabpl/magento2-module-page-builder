@@ -1,1 +1,35 @@
-define(["jquery"],function(d){return function(a,e){var l=d(e),i=1!==l.data("enableParallax")?1:parseFloat(l.data("parallaxSpeed"));"video"===l.data("background-type")&&require(["jarallax-wrapper","jarallaxVideo","vimeoWrapper"],function(){l.addClass("jarallax"),l.attr("data-jarallax",""),window.jarallax(l[0],{imgSrc:l.data("videoFallbackSrc"),speed:isNaN(i)?.5:i,videoLoop:l.data("videoLoop"),videoPlayOnlyVisible:l.data("videoPlayOnlyVisible"),videoLazyLoading:l.data("videoLazyLoad"),disableVideo:!1,elementInViewport:l.data("elementInViewport")&&l[0].querySelector(l.data("elementInViewport"))}),l[0].jarallax.video&&l[0].jarallax.video.on("started",function(){l[0].jarallax.$video&&(l[0].jarallax.$video.style.visibility="visible")})})}});
+define([
+    'jquery'
+], function ($) {
+    'use strict';
+
+    return function (config, element) {
+        var $element = $(element),
+            parallaxSpeed = $element.data('enableParallax') !== 1 ? 1 : parseFloat($element.data('parallaxSpeed'));
+
+        if ($element.data('background-type') !== 'video') {
+            return;
+        }
+
+        require(['jarallax-wrapper', 'jarallaxVideo', 'vimeoWrapper'], function () {
+            $element.addClass('jarallax');
+            $element.attr('data-jarallax', '');
+
+            window.jarallax($element[0], {
+                imgSrc: $element.data('videoFallbackSrc'),
+                speed: !isNaN(parallaxSpeed) ? parallaxSpeed : 0.5,
+                videoLoop: $element.data('videoLoop'),
+                videoPlayOnlyVisible: $element.data('videoPlayOnlyVisible'),
+                videoLazyLoading: $element.data('videoLazyLoad'),
+                disableVideo: false,
+                elementInViewport: $element.data('elementInViewport') &&
+                    $element[0].querySelector($element.data('elementInViewport'))
+            });
+            $element[0].jarallax.video && $element[0].jarallax.video.on('started', function () {
+                if ($element[0].jarallax.$video) {
+                    $element[0].jarallax.$video.style.visibility = 'visible';
+                }
+            });
+        });
+    };
+});

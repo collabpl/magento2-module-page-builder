@@ -1,6 +1,5 @@
 {
     "name": "collab/module-page-builder",
-    "version": "1.0.2",
     "description": "Magento 2 module with Page Builder extensions and improvements",
     "type": "magento2-module",
     "authors": [

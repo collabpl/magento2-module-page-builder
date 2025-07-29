@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 ### Changed
 
+## 1.1.0 - 2025-07-28
+### Changed
+- Revert for source js files minification
+
 ## 1.0.2 - 2024-09-06
 ### Added
 - `['jarallax-wrapper', 'jarallaxVideo', 'vimeoWrapper']` dependencies from `video-background.js` are loaded only when necesarry from now
@@ -25,5 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release
 
 [unreleased]: https://github.com/collabpl/magento2-module-page-builder/compare/1.0.1...HEAD
+[1.1.0]: https://github.com/collabpl/magento2-module-page-builder/compare/1.0.2...1.1.0
+[1.0.2]: https://github.com/collabpl/magento2-module-page-builder/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/collabpl/magento2-module-page-builder/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/collabpl/magento2-module-page-builder/releases/tag/1.0.0
